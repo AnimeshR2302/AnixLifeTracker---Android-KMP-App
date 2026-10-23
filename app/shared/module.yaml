@@ -1,0 +1,36 @@
+product:
+  type: kmp/lib
+  platforms: [ jvm, android, wasmJs ]
+
+dependencies:
+  - //core
+  - $compose.runtime
+  - $compose.foundation
+  - $compose.material3
+  - $compose.ui
+  - $compose.components.resources
+  - $compose.preview
+  - $compose.hotReload.runtimeApi
+  - $libs.androidx.lifecycle.viewmodel.compose
+  - $libs.androidx.lifecycle.runtime.compose
+  - $libs.kotlinx.datetime
+  - $libs.kotlinx.serialization.json
+  - $libs.ktor.client.core
+  - $libs.ktor.client.content.negotiation
+  - $libs.ktor.serialization.kotlinx.json
+
+dependencies@android:
+  - $compose.uiTooling
+  - $libs.androidx.room.runtime
+  - $libs.androidx.sqlite.bundled
+
+dependencies@jvm:
+  - $libs.androidx.room.runtime
+  - $libs.androidx.sqlite.bundled
+
+settings:
+  compose:
+    enabled: true
+    resources:
+      packageName: com.anix.android.anixlifetracker.resources
+      exposedAccessors: true

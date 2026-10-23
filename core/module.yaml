@@ -1,0 +1,15 @@
+product:
+  type: kmp/lib
+  platforms: [ jvm, android, wasmJs ]
+
+dependencies:
+  - $libs.kotlinx.datetime
+  - $libs.kotlinx.serialization.json
+
+dependencies@android:
+  - $libs.androidx.room.runtime
+  - $libs.androidx.sqlite.bundled
+
+dependencies@jvm:
+  - $libs.androidx.room.runtime
+  - $libs.androidx.sqlite.bundled
